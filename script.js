@@ -8,3 +8,14 @@ menu.onclick = function myFunction() {
 		x.className = "topnav"
 	}
 }
+
+function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -50);
+      setTimeout(backToTop, 0);
+    }
+  }
+  
+var arrow = document.querySelector('.up');
+arrow.addEventListener('click', backToTop);
+
